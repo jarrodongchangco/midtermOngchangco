@@ -1,0 +1,10 @@
+from django.urls import path
+from . import views
+
+app_name = 'post'
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('<int:post_id>/detail', views.detail, name='detail'),
+    path('<int:post_id>/update', views.update, name='update'),
+    path('create/', views.create, name='create'),
+]

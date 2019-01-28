@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  this is the detail page
+{% endblock %}
+
+{% block body %}
+ {{ post.title }}<br />
+ {{ post.datecreated }}
+ {{ post.content }}
+ {% for choice in question.choice.all %}
+  {{ Comment.content }} <br />
+ {% endfor %}
+{% endblock %}
